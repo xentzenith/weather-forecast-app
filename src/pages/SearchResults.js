@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { FaRandom } from 'react-icons/fa';
@@ -63,12 +64,6 @@ const SearchResults = () => {
         getWeather();
     }, [city]);
 
-    const getRandomCity = () => {
-        const randomCities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose', 'Austin', 'Jacksonville', 'Fort Worth', 'Columbus', 'Charlotte', 'Indianapolis', 'San Francisco', 'Seattle', 'Denver', 'Washington', 'Boston', 'El Paso', 'Nashville', 'Oklahoma City', 'Las Vegas', 'Detroit', 'Portland', 'Memphis', 'Louisville', 'Milwaukee', 'Baltimore', 'Albuquerque', 'Tucson', 'Fresno', 'Sacramento', 'Mesa', 'Kansas City', 'Atlanta', 'Long Beach', 'Colorado Springs', 'Raleigh', 'Miami', 'Virginia Beach', 'Omaha', 'Oakland', 'Minneapolis', 'Tulsa', 'Arlington', 'New Orleans', 'Wichita', 'Cleveland', 'Tampa', 'Bakersfield', 'Aurora', 'Anaheim', 'Honolulu', 'Santa Ana', 'Corpus Christi', 'Riverside', 'St. Louis', 'Lexington', 'Pittsburgh', 'Stockton', 'Anchorage', 'Cincinnati', 'Saint Paul', 'Greensboro', 'Toledo', 'Newark', 'Plano', 'Henderson', 'Lincoln', 'Orlando', 'Jersey City', 'Chula Vista', 'Buffalo', 'Fort Wayne', 'Chandler', 'St. Petersburg', 'Laredo', 'Durham', 'Irvine', 'Madison', 'Norfolk', 'Lubbock', 'Gilbert', 'Winston-Salem', 'Glendale', 'Reno', 'Hialeah', 'Garland', 'Chesapeake', 'Irving', 'North Las Vegas', 'Scottsdale', 'Baton Rouge', 'Fremont', 'Richmond', 'Boise', 'San Bernardino', 'Spokane', 'Birmingham', 'Modesto', 'Des Moines', 'Rochester', 'Tacoma', 'Fontana', 'Oxnard', 'Moreno Valley', 'Fayetteville', 'Aurora', 'Glendale', 'Yonkers', 'Huntington Beach', 'Montgomery', 'Amarillo', 'Akron', 'Little Rock', 'Augusta', 'Grand Rapids', 'Mobile', 'Salt Lake City', 'Huntsville', 'Tallahassee', 'Grand Prairie', 'Overland Park', 'Knoxville', 'Worcester', 'Brownsville', 'Newport News', 'Santa Clarita', 'Port St. Lucie', 'Providence', 'Fort Lauderdale', 'Chattanooga', 'Tempe', 'Oceanside', 'Garden Grove', 'Rancho Cucamonga', 'Cape Coral', 'Santa Rosa', 'Vancouver', 'Sioux Falls', 'Peoria', 'Ontario', 'Jackson', 'Elk Grove', 'Springfield', 'Pembroke Pines', 'Salem', 'Corona', 'Eugene', 'McKinney', 'Fort Collins', 'Lancaster', 'Cary', 'Palmdale', 'Hayward', 'Salinas', 'Frisco', 'Springfield'];
-        const randomCity = randomCities[Math.floor(Math.random() * randomCities.length)];
-        window.location.href = `/search-results?city=${randomCity}`;
-    };
-
     if (!weatherData) {
         return <div className="text-center text-gray-600">Loading...</div>;
     }
@@ -78,12 +73,13 @@ const SearchResults = () => {
     return (
         <div className="min-h-screen p-4 bg-gray-100 text-gray-800">
             <div className="flex justify-between mb-6">
-                <button 
-                    onClick={getRandomCity}
+                <Link to="/feeling-lucky">
+                <button
                     className="bg-green-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
-                >
+                    >
                     <FaRandom /> I'm Feeling Lucky
                 </button>
+                </Link>
             </div>
             <h2 className="text-3xl font-bold mb-4">Search Results</h2>
             <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
