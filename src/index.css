@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 
+/* Light theme */
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark theme */
+body.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 
 body {
   margin: 0;
