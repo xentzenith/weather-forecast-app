@@ -1,0 +1,76 @@
+PS C:\Users\ilker\OneDrive\Documents\GitHub Repos\weather-forecast-app> git add .
+>> git commit -m "Add deployment scripts and homepage"
+>> git push origin main
+>>
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+[main dac6577] Add deployment scripts and homepage
+ 2 files changed, 169 insertions(+), 1 deletion(-)
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.35 KiB | 185.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/xentzenith/weather-forecast-app.git
+   908d445..dac6577  main -> main
+PS C:\Users\ilker\OneDrive\Documents\GitHub Repos\weather-forecast-app> npm run deploy
+>>
+
+> inperson-lab@0.1.0 predeploy
+> npm run build
+
+
+> inperson-lab@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+
+warn - The `purge`/`content` options have changed in Tailwind CSS v3.0.       
+warn - Update your configuration file to eliminate this warning.
+warn - https://tailwindcss.com/docs/upgrade-guide#configure-content-sources   
+
+warn - The `darkMode` option in your Tailwind CSS configuration is set to `false`, which now behaves the same as `media`.
+warn - Change `darkMode` to `media` or remove it entirely.
+warn - https://tailwindcss.com/docs/upgrade-guide#remove-dark-mode-configuration
+One of your dependencies, babel-preset-react-app, is importing the
+"@babel/plugin-proposal-private-property-in-object" package without
+declaring it in its dependencies. This is currently working because
+"@babel/plugin-proposal-private-property-in-object" is already in your        
+node_modules folder for unrelated reasons, but it may break at any time.      
+
+babel-preset-react-app is part of the create-react-app project, which
+is not maintianed anymore. It is thus unlikely that this bug will
+ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to     
+your devDependencies to work around this error. This will make this message   
+go away.
+
+Compiled with warnings.
+
+[eslint]
+src\pages\FeelingLucky.js
+  Line 61:6:  React Hook useEffect has a missing dependency: 'exampleCities'. Either include it or remove the dependency array  react-hooks/exhaustive-deps 
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+File sizes after gzip:
+
+  66.35 kB  build\static\js\main.7625e2b8.js
+  1.92 kB   build\static\css\main.c13f5f04.css
+
+The project was built assuming it is hosted at /weather-forecast-app/.        
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+
+> inperson-lab@0.1.0 deploy
+> gh-pages -d build
+
+Published
