@@ -2,12 +2,23 @@
 
 ## Overview
 
-The Weather Forecast App is a React application that provides weather forecasts for cities. The app uses the Open-Meteo API to retrieve weather data and the Geocode Maps API to convert city names into geographic coordinates.
+The Weather Forecast App is a React-based application designed to provide weather forecasts for cities. It leverages the Open-Meteo API for weather data and the Geocode Maps API for converting city names into geographic coordinates.
+
+## Technologies Used
+- **React:** A JavaScript library for building user interfaces.
+- **React Router:** For routing and navigation within the application.
+- **Axios:** For making HTTP requests to external APIs.
+- **Tailwind** CSS: For styling and responsive design.
+- **react-toastify:** For displaying toast notifications.
+- **Open-Meteo API:** To fetch current weather data.
+- **Geocode Maps API:** To convert city names into geographic coordinates.
+- **GitHub Pages:** For deploying the application.
 
 ## Features
 
 - **City-based Weather Forecasts**: Enter a city name to get current weather conditions.
 - **Geocoding**: Automatically converts city names into latitude and longitude for accurate weather data.
+- **Toast Notifications:** Provides user feedback for error messages and interactions.
 
 ## Live Demo
 
