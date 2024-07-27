@@ -10,7 +10,7 @@ const SearchResults = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [theme, setTheme] = useState('light');
   
-    const key = '66a4d9f9e6871974664850yfw395282' || 'Your API key';
+    const key = 'Your API key';
   
     if(key === 'Your API key') {
       throw new Error('You need to provide an API key');
